@@ -4,8 +4,10 @@ from part1 import read_depths, count_increases
 def make_clumps(depths):
     clumps = []
     for i in range(len(depths)):
-        clumps.append(sum(depths[i:i + 3]))
-    return clumps
+        clump = depths[i:i + 3]
+        if len(clump) != 3:
+            return clumps
+        clumps.append(sum(clump))
 
 
 if __name__ == "__main__":
