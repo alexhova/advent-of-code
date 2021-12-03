@@ -1,4 +1,3 @@
-from typing import Counter
 from part1 import read_diagnostics, calculate_rates
 
 
