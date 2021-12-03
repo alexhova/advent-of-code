@@ -6,7 +6,7 @@ def read_diagnostics():
     count = len(lines)
     for line in lines:
         totals = [totals[i] + int(line[i].strip()) for i in range(length)]
-    return totals, count
+    return totals, count, lines, length
 
 
 def calculate_rates(totals, count):
@@ -28,7 +28,7 @@ def power_consumption(gamma, epsilon):
 
 
 if __name__ == "__main__":
-    totals, count = read_diagnostics()
+    totals, count, _, _ = read_diagnostics()
     gamma, epsilon = calculate_rates(totals, count)
     power = power_consumption(gamma, epsilon)
     print(f"power consumption is {power}")
