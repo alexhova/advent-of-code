@@ -48,4 +48,3 @@ if __name__ == "__main__":
             total_size += size
 
     print(f"total size of directories is {total_size}")
-    print(dir_sizes)
